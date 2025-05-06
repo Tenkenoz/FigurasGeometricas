@@ -16,7 +16,7 @@ namespace ObandoErick_FigurasGeometricas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSquare());
+            Application.Run(new FrmHome());
         }
     }
 }

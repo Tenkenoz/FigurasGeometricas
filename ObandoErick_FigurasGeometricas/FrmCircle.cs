@@ -10,59 +10,53 @@ using System.Windows.Forms;
 
 namespace ObandoErick_FigurasGeometricas
 {
-    public partial class FrmSquare : Form
+    public partial class FrmCircle : Form
     {
         //Declaracion de variables
-        Square ObjSquare = new Square();
+        Circle ObjCircle = new Circle();
 
-        private static FrmSquare instance;
-        public static FrmSquare Instance
+        private static FrmCircle instance;
+        public static FrmCircle Instance
         {
             get
             {
                 if (instance == null || instance.IsDisposed)
                 {
-                    instance = new FrmSquare();
+                    instance = new FrmCircle();
                 }
                 return instance;
             }
         }
-        public FrmSquare()
+        public FrmCircle()
         {
             InitializeComponent();
         }
 
-        private void txtWidth_TextChanged(object sender, EventArgs e)
+        private void lblSide_Click(object sender, EventArgs e)
         {
 
         }
 
         private void txtReset_Click(object sender, EventArgs e)
         {
-           ObjSquare.InitializeData(txtSide, txtPerimeter, txtArea,picCanvas);
+            ObjCircle.InitializeData(txtRadio, txtPerimeter, txtArea, picCanvas);   
         }
 
         private void txtExit_Click(object sender, EventArgs e)
         {
-            ObjSquare.CloseForm(this);
+            ObjCircle.CloseForm(this);
         }
 
         private void txtCalculate_Click(object sender, EventArgs e)
         {
-            ObjSquare.ReadData(txtSide);
-            ObjSquare.CalculatePerimeter();
-            ObjSquare.CalculateArea();
-            ObjSquare.PrintData(txtPerimeter, txtArea);
-            ObjSquare.PlotShape(picCanvas);
-
+            ObjCircle.ReadData(txtRadio);
+            ObjCircle.CalculatePerimeter();
+            ObjCircle.CalculateArea();
+            ObjCircle.PrintData(txtPerimeter, txtArea);
+            ObjCircle.PlotShape(picCanvas);
         }
 
         private void txtPerimeter_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtHeight_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -72,7 +66,7 @@ namespace ObandoErick_FigurasGeometricas
 
         }
 
-        private void width_Click(object sender, EventArgs e)
+        private void txtSide_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -87,12 +81,12 @@ namespace ObandoErick_FigurasGeometricas
 
         }
 
-        private void Height_Click(object sender, EventArgs e)
+        private void picCanvas_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void picCanvas_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

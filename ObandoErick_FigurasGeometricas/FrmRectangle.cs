@@ -14,6 +14,18 @@ namespace ObandoErick_FigurasGeometricas
     {
         //Declaracion de variables
         Rectangle ObjRectangle = new Rectangle();
+        private static FrmRectangle instance;
+        public static FrmRectangle Instance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                {
+                    instance = new FrmRectangle();
+                }
+                return instance;
+            }
+        }
         public FrmRectangle()
         {
             InitializeComponent();
