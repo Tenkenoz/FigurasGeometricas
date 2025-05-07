@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ObandoErick_FigurasGeometricas
 {
-    internal class Circle
+    internal class Semicircle
     {
         // Atributos
         private float mRadius;        // radio
@@ -19,7 +19,7 @@ namespace ObandoErick_FigurasGeometricas
         private const float SF = 20; // factor de escala para visualizar
 
         // Constructor
-        public Circle()
+        public Semicircle()
         {
             mRadius = 0.0f;
             mArea = 0.0f;
@@ -42,13 +42,13 @@ namespace ObandoErick_FigurasGeometricas
         // Calcular área
         public void CalculateArea()
         {
-            mArea = (float)Math.PI * (float)Math.Pow(mRadius, 2);
+            mArea = ((float)Math.PI * (float)Math.Pow(mRadius, 2))/2;
         }
 
         // Calcular perímetro
         public void CalculatePerimeter()
         {
-            mPerimeter = 2 * (float)Math.PI * mRadius;
+            mPerimeter = (float)Math.PI * mRadius;
         }
 
         // Imprimir resultados
@@ -79,9 +79,11 @@ namespace ObandoErick_FigurasGeometricas
             mGraphics = picCanvas.CreateGraphics();
             mPen = new Pen(Color.Blue, 2);
 
-            //Graficar un circulo
-           mGraphics.DrawEllipse(mPen,0,0,2*mRadius*SF, 2 * mRadius * SF);
+      
+            mGraphics.DrawArc(mPen, 0, 0, (int)(mRadius * SF), (int)(mRadius * SF), 0, 180);
+
             
+
         }
         // Cerrar el formulario
 
@@ -91,5 +93,4 @@ namespace ObandoErick_FigurasGeometricas
             ObjForm.Close();
         }
     }
-
 }

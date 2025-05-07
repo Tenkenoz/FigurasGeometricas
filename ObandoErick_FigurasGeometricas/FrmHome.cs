@@ -54,5 +54,69 @@ namespace ObandoErick_FigurasGeometricas
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void lINESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGraficoLineas frm = FrmGraficoLineas.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void ellipseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEllipse frm = FrmEllipse.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void semicircleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSemicircle frm = FrmSemicircle.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void trapezeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTrapeze frm = FrmTrapeze.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void trapezoidToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTrapezoid frm = FrmTrapezoid.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void rToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRhombus frm = FrmRhombus.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void rhomboidToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRhomboid frm = FrmRhomboid.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void starToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmStar frm = FrmStar.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void deltoidToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDeltoid frm = FrmDeltoid.Instance;
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
