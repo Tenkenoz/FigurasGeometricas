@@ -40,16 +40,13 @@
             this.txtReset = new System.Windows.Forms.Button();
             this.txtExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMajorDiagonal = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMinorDiagonal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.MajorDiagonal = new System.Windows.Forms.Label();
-            this.txtSideA = new System.Windows.Forms.TextBox();
             this.lblGraphic = new System.Windows.Forms.Label();
             this.picCanvas = new System.Windows.Forms.PictureBox();
-            this.txtMinorDiagonal = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSideB = new System.Windows.Forms.TextBox();
-            this.txtMajorDiagonal = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -153,6 +150,7 @@
             this.txtReset.TabIndex = 46;
             this.txtReset.Text = "Reset";
             this.txtReset.UseVisualStyleBackColor = false;
+            this.txtReset.Click += new System.EventHandler(this.txtReset_Click);
             // 
             // txtExit
             // 
@@ -172,57 +170,48 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtMinorDiagonal);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtSideB);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.MajorDiagonal);
-            this.groupBox1.Controls.Add(this.txtSideA);
-            this.groupBox1.Location = new System.Drawing.Point(23, 45);
+            this.groupBox1.Location = new System.Drawing.Point(23, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(275, 148);
+            this.groupBox1.Size = new System.Drawing.Size(275, 91);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inputs";
+            // 
+            // txtMajorDiagonal
+            // 
+            this.txtMajorDiagonal.Location = new System.Drawing.Point(118, 22);
+            this.txtMajorDiagonal.Name = "txtMajorDiagonal";
+            this.txtMajorDiagonal.Size = new System.Drawing.Size(100, 22);
+            this.txtMajorDiagonal.TabIndex = 48;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.CausesValidation = false;
+            this.label6.Location = new System.Drawing.Point(13, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 16);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "MinorDiagonal";
+            // 
+            // txtMinorDiagonal
+            // 
+            this.txtMinorDiagonal.Location = new System.Drawing.Point(114, 58);
+            this.txtMinorDiagonal.Name = "txtMinorDiagonal";
+            this.txtMinorDiagonal.Size = new System.Drawing.Size(100, 22);
+            this.txtMinorDiagonal.TabIndex = 46;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.CausesValidation = false;
-            this.label5.Location = new System.Drawing.Point(9, 86);
+            this.label5.Location = new System.Drawing.Point(13, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 16);
             this.label5.TabIndex = 44;
             this.label5.Text = "Major Diagonal";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.CausesValidation = false;
-            this.label4.Location = new System.Drawing.Point(9, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Side B";
-            // 
-            // MajorDiagonal
-            // 
-            this.MajorDiagonal.AutoSize = true;
-            this.MajorDiagonal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.MajorDiagonal.CausesValidation = false;
-            this.MajorDiagonal.Location = new System.Drawing.Point(7, 23);
-            this.MajorDiagonal.Name = "MajorDiagonal";
-            this.MajorDiagonal.Size = new System.Drawing.Size(47, 16);
-            this.MajorDiagonal.TabIndex = 38;
-            this.MajorDiagonal.Text = "Side A";
-            // 
-            // txtSideA
-            // 
-            this.txtSideA.Location = new System.Drawing.Point(79, 20);
-            this.txtSideA.Name = "txtSideA";
-            this.txtSideA.Size = new System.Drawing.Size(100, 22);
-            this.txtSideA.TabIndex = 41;
-            this.txtSideA.TextChanged += new System.EventHandler(this.txtSideA_TextChanged);
             // 
             // lblGraphic
             // 
@@ -242,43 +231,25 @@
             this.picCanvas.TabIndex = 73;
             this.picCanvas.TabStop = false;
             // 
-            // txtMinorDiagonal
+            // textBox1
             // 
-            this.txtMinorDiagonal.Location = new System.Drawing.Point(114, 114);
-            this.txtMinorDiagonal.Name = "txtMinorDiagonal";
-            this.txtMinorDiagonal.Size = new System.Drawing.Size(100, 22);
-            this.txtMinorDiagonal.TabIndex = 46;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.CausesValidation = false;
-            this.label6.Location = new System.Drawing.Point(13, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 16);
-            this.label6.TabIndex = 47;
-            this.label6.Text = "MinorDiagonal";
-            // 
-            // txtSideB
-            // 
-            this.txtSideB.Location = new System.Drawing.Point(79, 54);
-            this.txtSideB.Name = "txtSideB";
-            this.txtSideB.Size = new System.Drawing.Size(100, 22);
-            this.txtSideB.TabIndex = 43;
-            // 
-            // txtMajorDiagonal
-            // 
-            this.txtMajorDiagonal.Location = new System.Drawing.Point(114, 83);
-            this.txtMajorDiagonal.Name = "txtMajorDiagonal";
-            this.txtMajorDiagonal.Size = new System.Drawing.Size(100, 22);
-            this.txtMajorDiagonal.TabIndex = 48;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(800, 28);
+            this.textBox1.TabIndex = 78;
+            this.textBox1.Text = "Deltoid";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmDeltoid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -313,14 +284,11 @@
         private System.Windows.Forms.Button txtExit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label MajorDiagonal;
-        private System.Windows.Forms.TextBox txtSideA;
         private System.Windows.Forms.Label lblGraphic;
         private System.Windows.Forms.PictureBox picCanvas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtMinorDiagonal;
         private System.Windows.Forms.TextBox txtMajorDiagonal;
-        private System.Windows.Forms.TextBox txtSideB;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

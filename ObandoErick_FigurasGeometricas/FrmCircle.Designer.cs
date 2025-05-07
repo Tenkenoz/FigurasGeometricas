@@ -39,15 +39,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblRadio = new System.Windows.Forms.Label();
             this.lblGraphic = new System.Windows.Forms.Label();
-            this.lblIputs = new System.Windows.Forms.Label();
-            this.lblOutputs = new System.Windows.Forms.Label();
-            this.lblProcess = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // picCanvas
             // 
-            this.picCanvas.Location = new System.Drawing.Point(358, 57);
+            this.picCanvas.Location = new System.Drawing.Point(347, 57);
             this.picCanvas.Name = "picCanvas";
             this.picCanvas.Size = new System.Drawing.Size(394, 336);
             this.picCanvas.TabIndex = 33;
@@ -56,7 +62,7 @@
             // 
             // txtReset
             // 
-            this.txtReset.Location = new System.Drawing.Point(154, 192);
+            this.txtReset.Location = new System.Drawing.Point(103, 34);
             this.txtReset.Name = "txtReset";
             this.txtReset.Size = new System.Drawing.Size(75, 23);
             this.txtReset.TabIndex = 32;
@@ -66,7 +72,7 @@
             // 
             // txtExit
             // 
-            this.txtExit.Location = new System.Drawing.Point(255, 192);
+            this.txtExit.Location = new System.Drawing.Point(194, 34);
             this.txtExit.Name = "txtExit";
             this.txtExit.Size = new System.Drawing.Size(75, 23);
             this.txtExit.TabIndex = 31;
@@ -76,7 +82,7 @@
             // 
             // txtCalculate
             // 
-            this.txtCalculate.Location = new System.Drawing.Point(52, 192);
+            this.txtCalculate.Location = new System.Drawing.Point(12, 34);
             this.txtCalculate.Name = "txtCalculate";
             this.txtCalculate.Size = new System.Drawing.Size(75, 23);
             this.txtCalculate.TabIndex = 30;
@@ -86,7 +92,7 @@
             // 
             // txtPerimeter
             // 
-            this.txtPerimeter.Location = new System.Drawing.Point(129, 324);
+            this.txtPerimeter.Location = new System.Drawing.Point(78, 59);
             this.txtPerimeter.Name = "txtPerimeter";
             this.txtPerimeter.Size = new System.Drawing.Size(100, 22);
             this.txtPerimeter.TabIndex = 29;
@@ -94,7 +100,7 @@
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(129, 283);
+            this.txtArea.Location = new System.Drawing.Point(78, 31);
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(100, 22);
             this.txtArea.TabIndex = 28;
@@ -102,7 +108,7 @@
             // 
             // txtRadio
             // 
-            this.txtRadio.Location = new System.Drawing.Point(129, 95);
+            this.txtRadio.Location = new System.Drawing.Point(88, 41);
             this.txtRadio.Name = "txtRadio";
             this.txtRadio.Size = new System.Drawing.Size(100, 22);
             this.txtRadio.TabIndex = 27;
@@ -111,7 +117,7 @@
             // Area
             // 
             this.Area.AutoSize = true;
-            this.Area.Location = new System.Drawing.Point(58, 289);
+            this.Area.Location = new System.Drawing.Point(19, 34);
             this.Area.Name = "Area";
             this.Area.Size = new System.Drawing.Size(36, 16);
             this.Area.TabIndex = 26;
@@ -121,7 +127,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 330);
+            this.label1.Location = new System.Drawing.Point(4, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 25;
@@ -131,12 +137,11 @@
             // lblRadio
             // 
             this.lblRadio.AutoSize = true;
-            this.lblRadio.Location = new System.Drawing.Point(52, 95);
+            this.lblRadio.Location = new System.Drawing.Point(19, 44);
             this.lblRadio.Name = "lblRadio";
             this.lblRadio.Size = new System.Drawing.Size(50, 16);
             this.lblRadio.TabIndex = 24;
             this.lblRadio.Text = "Radius";
-            this.lblRadio.Click += new System.EventHandler(this.lblSide_Click);
             // 
             // lblGraphic
             // 
@@ -147,56 +152,96 @@
             this.lblGraphic.TabIndex = 34;
             this.lblGraphic.Text = "Graphic";
             // 
-            // lblIputs
+            // textBox1
             // 
-            this.lblIputs.AutoSize = true;
-            this.lblIputs.Location = new System.Drawing.Point(52, 57);
-            this.lblIputs.Name = "lblIputs";
-            this.lblIputs.Size = new System.Drawing.Size(42, 16);
-            this.lblIputs.TabIndex = 35;
-            this.lblIputs.Text = "Inputs";
+            this.textBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(800, 28);
+            this.textBox1.TabIndex = 61;
+            this.textBox1.Text = "Circle";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lblOutputs
+            // groupBox3
             // 
-            this.lblOutputs.AutoSize = true;
-            this.lblOutputs.Location = new System.Drawing.Point(52, 250);
-            this.lblOutputs.Name = "lblOutputs";
-            this.lblOutputs.Size = new System.Drawing.Size(52, 16);
-            this.lblOutputs.TabIndex = 36;
-            this.lblOutputs.Text = "Outputs";
-            this.lblOutputs.Click += new System.EventHandler(this.label2_Click);
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.Area);
+            this.groupBox3.Controls.Add(this.txtArea);
+            this.groupBox3.Controls.Add(this.txtPerimeter);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Location = new System.Drawing.Point(36, 285);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(275, 120);
+            this.groupBox3.TabIndex = 60;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Outputs";
             // 
-            // lblProcess
+            // label3
             // 
-            this.lblProcess.AutoSize = true;
-            this.lblProcess.Location = new System.Drawing.Point(52, 153);
-            this.lblProcess.Name = "lblProcess";
-            this.lblProcess.Size = new System.Drawing.Size(57, 16);
-            this.lblProcess.TabIndex = 37;
-            this.lblProcess.Text = "Process";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.TabIndex = 38;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtCalculate);
+            this.groupBox2.Controls.Add(this.txtReset);
+            this.groupBox2.Controls.Add(this.txtExit);
+            this.groupBox2.Location = new System.Drawing.Point(42, 189);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(275, 78);
+            this.groupBox2.TabIndex = 59;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Process";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 16);
+            this.label5.TabIndex = 38;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.lblRadio);
+            this.groupBox1.Controls.Add(this.txtRadio);
+            this.groupBox1.Location = new System.Drawing.Point(42, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(240, 104);
+            this.groupBox1.TabIndex = 58;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Inputs";
             // 
             // FrmCircle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblProcess);
-            this.Controls.Add(this.lblOutputs);
-            this.Controls.Add(this.lblIputs);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblGraphic);
             this.Controls.Add(this.picCanvas);
-            this.Controls.Add(this.txtReset);
-            this.Controls.Add(this.txtExit);
-            this.Controls.Add(this.txtCalculate);
-            this.Controls.Add(this.txtPerimeter);
-            this.Controls.Add(this.txtArea);
-            this.Controls.Add(this.txtRadio);
-            this.Controls.Add(this.Area);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblRadio);
             this.Name = "FrmCircle";
             this.Text = "FrmCircle";
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,8 +260,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRadio;
         private System.Windows.Forms.Label lblGraphic;
-        private System.Windows.Forms.Label lblIputs;
-        private System.Windows.Forms.Label lblOutputs;
-        private System.Windows.Forms.Label lblProcess;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

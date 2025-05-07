@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ObandoErick_FigurasGeometricas
 {
     public partial class FrmCircle : Form
     {
-        //Declaracion de variables
+        // Declaración de variables
         Circle ObjCircle = new Circle();
 
         private static FrmCircle instance;
@@ -27,19 +21,16 @@ namespace ObandoErick_FigurasGeometricas
                 return instance;
             }
         }
+
         public FrmCircle()
         {
             InitializeComponent();
-        }
-
-        private void lblSide_Click(object sender, EventArgs e)
-        {
-
+            txtRadio.Focus();
         }
 
         private void txtReset_Click(object sender, EventArgs e)
         {
-            ObjCircle.InitializeData(txtRadio, txtPerimeter, txtArea, picCanvas);   
+            ObjCircle.InitializeData(txtRadio, txtPerimeter, txtArea, picCanvas);
         }
 
         private void txtExit_Click(object sender, EventArgs e)
@@ -49,6 +40,33 @@ namespace ObandoErick_FigurasGeometricas
 
         private void txtCalculate_Click(object sender, EventArgs e)
         {
+            // Validación 1: Campo vacío
+            if (string.IsNullOrWhiteSpace(txtRadio.Text))
+            {
+                MessageBox.Show("Debe ingresar el radio del círculo", "Dato faltante");
+                txtRadio.Focus();
+                return;
+            }
+
+            // Validación 2: Formato numérico
+            if (!float.TryParse(txtRadio.Text, out float radius))
+            {
+                MessageBox.Show("El radio debe ser un valor numérico", "Formato incorrecto");
+                txtRadio.SelectAll();
+                txtRadio.Focus();
+                return;
+            }
+
+            // Validación 3: Valor positivo
+            if (radius <= 0)
+            {
+                MessageBox.Show("El radio debe ser mayor que cero", "Valor inválido");
+                txtRadio.SelectAll();
+                txtRadio.Focus();
+                return;
+            }
+
+            // Si pasa las validaciones, ejecutar la lógica original
             ObjCircle.ReadData(txtRadio);
             ObjCircle.CalculatePerimeter();
             ObjCircle.CalculateArea();
@@ -56,39 +74,14 @@ namespace ObandoErick_FigurasGeometricas
             ObjCircle.PlotShape(picCanvas);
         }
 
-        private void txtPerimeter_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtArea_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSide_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Area_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picCanvas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        // Event handlers vacíos
+        private void lblSide_Click(object sender, EventArgs e) { }
+        private void txtPerimeter_TextChanged(object sender, EventArgs e) { }
+        private void txtArea_TextChanged(object sender, EventArgs e) { }
+        private void txtSide_TextChanged(object sender, EventArgs e) { }
+        private void Area_Click(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void picCanvas_Click(object sender, EventArgs e) { }
+        private void label2_Click(object sender, EventArgs e) { }
     }
 }

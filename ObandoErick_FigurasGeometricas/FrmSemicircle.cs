@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ObandoErick_FigurasGeometricas
 {
     public partial class FrmSemicircle : Form
-
     {
         Semicircle objSemicircle = new Semicircle();
-        // Singleton pattern
+
         private static FrmSemicircle instance;
         public static FrmSemicircle Instance
         {
@@ -27,18 +19,34 @@ namespace ObandoErick_FigurasGeometricas
                 return instance;
             }
         }
+
         public FrmSemicircle()
         {
             InitializeComponent();
-        }
-
-        private void lblRadio_Click(object sender, EventArgs e)
-        {
-
+            txtRadius.Focus();
         }
 
         private void txtCalculate_Click(object sender, EventArgs e)
         {
+            // Validación para el radio
+            if (string.IsNullOrWhiteSpace(txtRadius.Text))
+            {
+                MessageBox.Show("Por favor ingrese el radio del semicírculo", "Dato faltante",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtRadius.Focus();
+                return;
+            }
+
+            if (!float.TryParse(txtRadius.Text, out float radius) || radius <= 0)
+            {
+                MessageBox.Show("El radio debe ser un número positivo", "Dato inválido",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtRadius.SelectAll();
+                txtRadius.Focus();
+                return;
+            }
+
+            // Si pasa la validación, ejecutar cálculos
             objSemicircle.ReadData(txtRadius);
             objSemicircle.CalculateArea();
             objSemicircle.CalculatePerimeter();
@@ -54,6 +62,11 @@ namespace ObandoErick_FigurasGeometricas
         private void txtExit_Click(object sender, EventArgs e)
         {
             objSemicircle.CloseForm(this);
+        }
+
+        private void lblRadio_Click(object sender, EventArgs e)
+        {
+            // Evento vacío
         }
     }
 }

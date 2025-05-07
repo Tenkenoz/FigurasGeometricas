@@ -40,10 +40,10 @@
             this.trapezeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trapezoidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lINESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rhomboidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.starToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deltoidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lINESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.lINESToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,65 +89,86 @@
             // cuadradoToolStripMenuItem
             // 
             this.cuadradoToolStripMenuItem.Name = "cuadradoToolStripMenuItem";
-            this.cuadradoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cuadradoToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.cuadradoToolStripMenuItem.Text = "Square";
             this.cuadradoToolStripMenuItem.Click += new System.EventHandler(this.cuadradoToolStripMenuItem_Click);
             // 
             // rectanguloToolStripMenuItem
             // 
             this.rectanguloToolStripMenuItem.Name = "rectanguloToolStripMenuItem";
-            this.rectanguloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rectanguloToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.rectanguloToolStripMenuItem.Text = "Rectangle";
             this.rectanguloToolStripMenuItem.Click += new System.EventHandler(this.rectanguloToolStripMenuItem_Click);
             // 
             // cuadradoToolStripMenuItem1
             // 
             this.cuadradoToolStripMenuItem1.Name = "cuadradoToolStripMenuItem1";
-            this.cuadradoToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.cuadradoToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
             this.cuadradoToolStripMenuItem1.Text = "Circle";
             this.cuadradoToolStripMenuItem1.Click += new System.EventHandler(this.cuadradoToolStripMenuItem1_Click);
             // 
             // trianguloToolStripMenuItem
             // 
             this.trianguloToolStripMenuItem.Name = "trianguloToolStripMenuItem";
-            this.trianguloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.trianguloToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.trianguloToolStripMenuItem.Text = "Triangle";
             this.trianguloToolStripMenuItem.Click += new System.EventHandler(this.trianguloToolStripMenuItem_Click);
             // 
             // ellipseToolStripMenuItem
             // 
             this.ellipseToolStripMenuItem.Name = "ellipseToolStripMenuItem";
-            this.ellipseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ellipseToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.ellipseToolStripMenuItem.Text = "Ellipse";
             this.ellipseToolStripMenuItem.Click += new System.EventHandler(this.ellipseToolStripMenuItem_Click);
             // 
             // semicircleToolStripMenuItem
             // 
             this.semicircleToolStripMenuItem.Name = "semicircleToolStripMenuItem";
-            this.semicircleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.semicircleToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.semicircleToolStripMenuItem.Text = "Semicircle";
             this.semicircleToolStripMenuItem.Click += new System.EventHandler(this.semicircleToolStripMenuItem_Click);
             // 
             // trapezeToolStripMenuItem
             // 
             this.trapezeToolStripMenuItem.Name = "trapezeToolStripMenuItem";
-            this.trapezeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.trapezeToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.trapezeToolStripMenuItem.Text = "Trapeze";
             this.trapezeToolStripMenuItem.Click += new System.EventHandler(this.trapezeToolStripMenuItem_Click);
             // 
             // trapezoidToolStripMenuItem
             // 
             this.trapezoidToolStripMenuItem.Name = "trapezoidToolStripMenuItem";
-            this.trapezoidToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.trapezoidToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.trapezoidToolStripMenuItem.Text = "Trapezoid";
             this.trapezoidToolStripMenuItem.Click += new System.EventHandler(this.trapezoidToolStripMenuItem_Click);
             // 
             // rToolStripMenuItem
             // 
             this.rToolStripMenuItem.Name = "rToolStripMenuItem";
-            this.rToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.rToolStripMenuItem.Text = "Rhombus";
             this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
+            // 
+            // rhomboidToolStripMenuItem
+            // 
+            this.rhomboidToolStripMenuItem.Name = "rhomboidToolStripMenuItem";
+            this.rhomboidToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.rhomboidToolStripMenuItem.Text = "Rhomboid";
+            this.rhomboidToolStripMenuItem.Click += new System.EventHandler(this.rhomboidToolStripMenuItem_Click);
+            // 
+            // starToolStripMenuItem
+            // 
+            this.starToolStripMenuItem.Name = "starToolStripMenuItem";
+            this.starToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.starToolStripMenuItem.Text = "Star";
+            this.starToolStripMenuItem.Click += new System.EventHandler(this.starToolStripMenuItem_Click);
+            // 
+            // deltoidToolStripMenuItem
+            // 
+            this.deltoidToolStripMenuItem.Name = "deltoidToolStripMenuItem";
+            this.deltoidToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.deltoidToolStripMenuItem.Text = "Deltoid";
+            this.deltoidToolStripMenuItem.Click += new System.EventHandler(this.deltoidToolStripMenuItem_Click);
             // 
             // lINESToolStripMenuItem
             // 
@@ -155,27 +176,6 @@
             this.lINESToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.lINESToolStripMenuItem.Text = "LINES";
             this.lINESToolStripMenuItem.Click += new System.EventHandler(this.lINESToolStripMenuItem_Click);
-            // 
-            // rhomboidToolStripMenuItem
-            // 
-            this.rhomboidToolStripMenuItem.Name = "rhomboidToolStripMenuItem";
-            this.rhomboidToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.rhomboidToolStripMenuItem.Text = "Rhomboid";
-            this.rhomboidToolStripMenuItem.Click += new System.EventHandler(this.rhomboidToolStripMenuItem_Click);
-            // 
-            // starToolStripMenuItem
-            // 
-            this.starToolStripMenuItem.Name = "starToolStripMenuItem";
-            this.starToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.starToolStripMenuItem.Text = "Star";
-            this.starToolStripMenuItem.Click += new System.EventHandler(this.starToolStripMenuItem_Click);
-            // 
-            // deltoidToolStripMenuItem
-            // 
-            this.deltoidToolStripMenuItem.Name = "deltoidToolStripMenuItem";
-            this.deltoidToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.deltoidToolStripMenuItem.Text = "Deltoid";
-            this.deltoidToolStripMenuItem.Click += new System.EventHandler(this.deltoidToolStripMenuItem_Click);
             // 
             // FrmHome
             // 

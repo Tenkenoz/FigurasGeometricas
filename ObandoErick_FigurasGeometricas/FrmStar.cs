@@ -1,23 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ObandoErick_FigurasGeometricas
 {
     public partial class FrmStar : Form
     {
-        public FrmStar()
-        {
-            InitializeComponent();
-        }
         Star objStar = new Star();
-        // Singleton pattern
+
         private static FrmStar instance;
         public static FrmStar Instance
         {
@@ -31,16 +20,50 @@ namespace ObandoErick_FigurasGeometricas
             }
         }
 
+        public FrmStar()
+        {
+            InitializeComponent();
+            txtRadio.Focus();
+        }
+
         private void txtCalculate_Click(object sender, EventArgs e)
         {
+            // Validación para el radio de la estrella
+            if (string.IsNullOrWhiteSpace(txtRadio.Text))
+            {
+                MessageBox.Show("Por favor ingrese el radio de la estrella", "Dato faltante",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtRadio.Focus();
+                return;
+            }
+
+            if (!float.TryParse(txtRadio.Text, out float radius) || radius <= 0)
+            {
+                MessageBox.Show("El radio debe ser un número positivo", "Dato inválido",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtRadio.SelectAll();
+                txtRadio.Focus();
+                return;
+            }
+
+            // Validación de rango máximo (opcional)
+            const float maxRadius = 500;
+            if (radius > maxRadius)
+            {
+                MessageBox.Show($"El radio no puede ser mayor que {maxRadius}", "Valor excedido",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtRadio.SelectAll();
+                txtRadio.Focus();
+                return;
+            }
+
+            // Si pasa las validaciones, ejecutar cálculos
             objStar.ReadData(txtRadio);
             objStar.CalculateArea();
             objStar.CalculatePerimeter();
             objStar.CalculateVertices();
             objStar.PrintData(txtPerimeter, txtArea);
             objStar.PlotShape(picCanvas);
-
-
         }
 
         private void txtReset_Click(object sender, EventArgs e)

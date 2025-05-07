@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ObandoErick_FigurasGeometricas
 {
     public partial class FrmRectangle : Form
     {
-        //Declaracion de variables
         Rectangle ObjRectangle = new Rectangle();
+
         private static FrmRectangle instance;
         public static FrmRectangle Instance
         {
@@ -26,58 +19,73 @@ namespace ObandoErick_FigurasGeometricas
                 return instance;
             }
         }
+
         public FrmRectangle()
         {
             InitializeComponent();
+            txtWidth.Focus();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void txtCalculate_Click_1(object sender, EventArgs e)
         {
+            // Validación para el ancho
+            if (string.IsNullOrWhiteSpace(txtWidth.Text))
+            {
+                MessageBox.Show("Por favor ingrese el ancho del rectángulo", "Dato faltante",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtWidth.Focus();
+                return;
+            }
 
-        }
+            if (!float.TryParse(txtWidth.Text, out float width) || width <= 0)
+            {
+                MessageBox.Show("El ancho debe ser un número positivo", "Dato inválido",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtWidth.SelectAll();
+                txtWidth.Focus();
+                return;
+            }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
+            // Validación para el alto
+            if (string.IsNullOrWhiteSpace(txtHeight.Text))
+            {
+                MessageBox.Show("Por favor ingrese el alto del rectángulo", "Dato faltante",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHeight.Focus();
+                return;
+            }
 
-        }
+            if (!float.TryParse(txtHeight.Text, out float height) || height <= 0)
+            {
+                MessageBox.Show("El alto debe ser un número positivo", "Dato inválido",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtHeight.SelectAll();
+                txtHeight.Focus();
+                return;
+            }
 
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmRectangle_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCalculate_Click(object sender, EventArgs e)
-        {
+            // Ejecutar cálculos si las validaciones son correctas
             ObjRectangle.ReadData(txtWidth, txtHeight);
-
-            // Calcular el perímetro y el área
             ObjRectangle.CalculatePerimeter();
             ObjRectangle.CalculateArea();
-
-            // Imprimir los resultados en los TextBox correspondientes
             ObjRectangle.PrintData(txtPerimeter, txtArea);
-
-            // Graficar el rectángulo en el PictureBox
             ObjRectangle.PlotShape(picCanvas);
         }
 
         private void txtReset_Click(object sender, EventArgs e)
         {
-            // Crear una instancia de la clase Rectangle
-            Rectangle rect = new Rectangle();
-
-            // Inicializar los datos y controles
             ObjRectangle.InitializeData(txtWidth, txtHeight, txtPerimeter, txtArea, picCanvas);
         }
 
-        private void txtExit_Click(object sender, EventArgs e)
+        private void txtExit_Click_1(object sender, EventArgs e)
         {
             ObjRectangle.CloseForm(this);
         }
+
+        // Event handlers vacíos
+        private void label1_Click(object sender, EventArgs e) { }
+        private void label1_Click_1(object sender, EventArgs e) { }
+        private void label1_Click_2(object sender, EventArgs e) { }
+        private void FrmRectangle_Load(object sender, EventArgs e) { }
     }
 }

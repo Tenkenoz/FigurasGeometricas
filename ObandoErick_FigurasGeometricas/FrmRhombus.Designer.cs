@@ -63,7 +63,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(800, 28);
             this.textBox1.TabIndex = 67;
-            this.textBox1.Text = "Trapeze";
+            this.textBox1.Text = "Rhombus";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox3

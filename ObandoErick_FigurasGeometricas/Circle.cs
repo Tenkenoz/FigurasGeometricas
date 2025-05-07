@@ -91,5 +91,5 @@ namespace ObandoErick_FigurasGeometricas
             ObjForm.Close();
         }
     }
-
 }
+
